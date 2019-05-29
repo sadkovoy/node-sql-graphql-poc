@@ -1,4 +1,13 @@
-type Channel {
+# import Video from 'video.graphql'
+
+type VideoCard {
   id: ID!
   title: String!
+  videoId: ID!
+  video: Video!
+}
+
+type VideoCardPagination {
+  items: [VideoCard!]!
+  pagination: PaginationInfo!
 }

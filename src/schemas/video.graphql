@@ -1,0 +1,13 @@
+# import PaginationInfo from 'common.graphql'
+# import VideoCard from 'video-card.graphql'
+
+type Video {
+  id: ID!
+  title: String!
+  cards: [VideoCard!]!
+}
+
+type VideoPagination {
+  items: [Video!]!
+  pagination: PaginationInfo!
+}

@@ -1,0 +1,17 @@
+# import Video from 'video.graphql'
+# import VideoPagination from 'video.graphql'
+# import VideoCard from 'video-card.graphql'
+# import VideoCardPagination from 'video-card.graphql'
+
+type Query {
+  videos(
+    page: Int! = 1
+    itemsPerPage: Int! = 20
+  ): VideoPagination
+  videoCards(
+    page: Int!
+    itemsPerPage: Int!
+  ): VideoCardPagination
+  video(id: ID!): Video
+  videoCard(id: ID!): VideoCard
+}

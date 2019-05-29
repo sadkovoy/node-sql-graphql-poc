@@ -1,19 +1,19 @@
 module.exports = (sequelize, DataTypes) => {
-  const Channel = sequelize.define('author', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
+  const Video = sequelize.define('video', {
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      title: DataTypes.STRING,
     },
-    title: DataTypes.STRING,
-  },
-  {
-    freezeTableName: true,
-  });
+    {
+      freezeTableName: true,
+    });
 
-  Channel.associate = (models) => {
-    Channel.hasMany(models.video, { foreignKey: 'channel_id' });
+  Video.associate = (models) => {
+    Video.hasMany(models.videoCard, { foreignKey: 'video_id' });
   };
 
-  return Channel;
+  return Video;
 };

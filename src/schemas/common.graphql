@@ -1,0 +1,5 @@
+type PaginationInfo {
+  page: Int!
+  itemsPerPage: Int!
+  totalPages: Int!
+}
